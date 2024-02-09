@@ -3,7 +3,7 @@
    * Object for storing completion times
    *  {
    *    name: string
-   *    time: number
+   *    completionTime: number
    *    dateAchieved: Date
    *  }
    */
