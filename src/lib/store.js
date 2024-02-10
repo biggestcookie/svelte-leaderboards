@@ -1,5 +1,11 @@
 import { writable } from "svelte/store";
 
-export const pageCounter = writable(0);
+/**
+ * Object for storing completion times
+ *  {
+ *    name: string
+ *    completionTime: number
+ *    completionDate: Date
+ *  }
+ */
 export const leaderboardEntries = writable([]);
-export const lastCompletedTime = writable(0);

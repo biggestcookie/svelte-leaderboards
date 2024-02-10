@@ -1,10 +1,17 @@
 <script>
-  export let pageHandler;
+  import { createEventDispatcher } from "svelte";
+  import Leaderboard from "../lib/leaderboard.svelte";
+
+  const dispatch = createEventDispatcher(); // Allow component to dispatch event to parent
 </script>
 
-<section class="hero is-fullheight">
-  <div class="hero-body is-flex-direction-column is-justify-content-center">
-    <p class="title">Welcome</p>
-    <button class="button" on:click={pageHandler()}> Start the game! </button>
-  </div>
-</section>
+<div class="has-text-centered block">
+  <p class="title">Welcome</p>
+
+  <!-- Dispatches 'start' event to parent when clicked -->
+  <button class="button" on:click={() => dispatch("start")}>
+    Start the game!
+  </button>
+
+  <Leaderboard />
+</div>
